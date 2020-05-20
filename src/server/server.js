@@ -45,7 +45,6 @@ app.post('/add', (req, res) => {
 app.post('/delete', (req, res) => {
     let data = req.body.BookId;
     let sql = "DELETE FROM books WHERE BookId = ?";
-
     con.query(sql, data, function(err, result) {
         if (err)
         {

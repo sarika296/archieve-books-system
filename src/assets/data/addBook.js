@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Header from '../assets/data/Header'
-import '../assets/style/style.css'
+import Header from './Header'
+import '../style/style.css'
 
 class AddBooks extends Component {
 

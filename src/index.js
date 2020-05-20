@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Switch, Route } from 'react-router-dom'
 import createBrowswrHistory from 'history/createBrowserHistory';
-import AddBook from '../src/components/AddBook'
-import DeleteBook from './assets/data/DeleteBook'
-import UpdateBook from './assets/data/UpdateBook'
-import SearchBook from './assets/data/SearchBook'
+import AddBook from './assets/data/addBook'
+import DeleteBook from './assets/data/deleteBook'
+import UpdateBook from './assets/data/updateBook'
+import SearchBook from './assets/data/searchBook'
 
 
 ReactDOM.render(

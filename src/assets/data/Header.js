@@ -5,7 +5,7 @@ const Header = props => {
 
     const style = {
         display:'inline-block',
-        margin:10,
+        margin:20,
         marginBottom:30
     };
 
