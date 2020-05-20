@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 import Header from './Header'
 import '../style/style.css'
 
@@ -12,6 +13,23 @@ class AddBooks extends Component {
         author: "",
         price: "",
         picture: ""
+    }
+
+    onChange = e => {
+        this.setState({ [ e.target.name ]: e.target.value })
+    }
+
+    onSubmit = e => {
+        const {tag, BookId, title, author, price, picture } = this.state;
+        e.preventDefault();
+        if(BookId!=='')
+        {
+            axios.post('/add', { tag: tag, BookId: BookId, title:title, author:author,price:price,picture:picture })
+                  .then(res => {
+                      console.log(res.status);
+                    })
+                  .catch(err => console.log('error',err));  
+        }
     }
 
     render() {
