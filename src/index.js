@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Switch, Route } from 'react-router-dom'
 import createBrowswrHistory from 'history/createBrowserHistory';
-import AddBook from './assets/data/AddBook'
+import AddBook from '../src/components/AddBook'
 import DeleteBook from './assets/data/DeleteBook'
 import UpdateBook from './assets/data/UpdateBook'
 import SearchBook from './assets/data/SearchBook'
