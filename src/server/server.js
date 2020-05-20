@@ -57,3 +57,27 @@ app.post('/delete', (req, res) => {
         }
     });
 });
+
+
+app.post('/update', (req, res) => {
+  
+    if(req.body.selected =='author')
+    {
+        var sql = `UPDATE books set author = ? WHERE BookId = ? `;
+    }
+    else if(req.body.selected =='price')
+    {
+        sql = `UPDATE books set price = ? WHERE BookId = ? `;
+    }
+    let data = [req.body.new_value, req.body.BookId];
+    con.query(sql, data, function(err, result) {
+        if (err)
+        {
+            return console.error(err.message);
+        }
+        else
+        {
+            console.log('updated Row(s):', result.changedRows);
+        }
+    });
+});

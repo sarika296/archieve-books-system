@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 import Header from './Header'
 import '../style/style.css'
 
@@ -11,6 +12,21 @@ class UpdateBook extends Component {
         selected: ""
        
     }
+
+    onChange = e => {
+        this.setState({ [ e.target.name ]: e.target.value })
+    }
+
+    onSubmit = e => {
+        const { BookId, new_value, selected } = this.state;
+        e.preventDefault();
+        axios.post('/update', { BookId: BookId, new_value: new_value, selected: selected })
+                .then(res => {
+                    console.log(res.status);
+                })
+                .catch(err => console.log('error',err));  
+    }
+
     render() {
         console.log("result",this.state);
         return(
@@ -41,7 +57,6 @@ class UpdateBook extends Component {
                         onChange={this.onChange}
                     /><br /><br /><br />
                     <button type="submit"  className="add_btn">Update</button>
-
         </form>
         </div>
         </div>
