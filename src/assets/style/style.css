@@ -1,0 +1,85 @@
+
+body{
+background-color: purple;
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+padding: 100px;
+height: 100px;
+align-content: center;
+}
+
+.card-add{
+height: 545px;
+margin-top: auto;
+margin-bottom: auto;
+width: 500px;
+background-color: rgba(6, 1, 4, 0.5) !important;
+}
+
+.card-delete{
+height: 220px;
+width: 600px;
+padding: 10px;
+background-color: rgba(6, 1, 4, 0.5) !important;
+}
+
+.card-update{
+    height: 450px;
+    width: 500px;
+    padding: 10px;
+    background-color: rgba(6, 1, 4, 0.5) !important;
+    }
+
+.drop {
+    height: 40px;
+    width: 238px;
+    margin-left: 70px;
+}
+
+.click {
+    height: 40px;
+}
+   
+#form input {
+    height: 40px;
+    margin-left: 70px;
+    padding: 0 20px;
+    color: green;
+}
+
+.card-header h3{
+color: limegreen;
+}
+
+
+.add_btn{
+color: black;
+background-color: sienna;
+width: 130px;
+height: 50px;
+margin-left: 70px;
+padding: 0 20px;
+}
+
+.add_btn:hover{
+color: black;
+background-color: sandybrown;
+}
+
+.search_btn1{
+    color: black;
+    background-color: purple;
+    width: 130px;
+    padding: 6px;
+    margin: 20px;
+    }
+    
+    .search_btn1:hover{
+    color: black;
+    background-color: plum;
+    }
