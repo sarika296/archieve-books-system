@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from './Header'
 import '../style/style.css'
 
 class Login extends Component {
@@ -9,12 +10,13 @@ class Login extends Component {
     render() {
         return(
         <div className="container">
-            <div className="card">
+        <Header />
+            <div className="card-login">
                 <div className="card-header">
                 <br />
                     <h3>Login</h3><br />
                 </div>
-                <form id="form">
+            <form id="form">
                 <input type="text"
                     name="email" required
                     id="email"
@@ -25,9 +27,7 @@ class Login extends Component {
                     id="password"
                     placeholder="Password"
                 /><br /><br />
-            <div className="form-group">
-                <button type="submit"  className="btn float-right login_btn">REGISTER</button>
-            </div>
+                <button type="submit" className="login_btn">Login</button>
         </form>
         </div>
         </div>
