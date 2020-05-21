@@ -25,6 +25,22 @@ var server = app.listen(port, function (req, res) {
     console.log("Listening at " + port);
 });
 
+app.post('/signup', (req, res) => {
+    let data = {username: req.body.username, email: req.body.email, password: req.body.password };
+    let sql = "insert into users set ?";
+
+    con.query(sql, data, function(err, result) {
+        if (err)
+        {
+            return console.error(err.message);
+        }
+        else
+        {
+            console.log('inserted Row(s):', result.affectedRows);
+        }
+    });
+});
+
 
 app.post('/add', (req, res) => {
     let data = {tag: req.body.tag, BookId: req.body.BookId, title: req.body.title, author: req.body.author, price: req.body.price, picture: req.body.picture};
