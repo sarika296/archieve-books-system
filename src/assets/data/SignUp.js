@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Header from './Header'
+import '../style/style.css'
 
 class SignUp extends Component {
     state ={
@@ -10,11 +12,13 @@ class SignUp extends Component {
     render() {
         return(
         <div className="container">
-            <div className="card">
+            <Header />
+            <div className="card-register">
                 <div className="card-header">
                     <h3>Register</h3>
                 </div>
                 <form id="form">
+                <br />
                     <input type="text"
                         name="username" required
                         id="username"
@@ -35,9 +39,7 @@ class SignUp extends Component {
                     id="repassword"
                     placeholder="Confirm password"
                 /><br /><br />
-            <div className="form-group">
-                <button type="submit"  className="btn float-right login_btn">REGISTER</button>
-            </div>
+                <button type="submit"  className="register_btn">Register</button>
         </form>
         </div>
         </div>

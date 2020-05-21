@@ -45,6 +45,13 @@ body{
     width: 500px;
     background-color: rgba(6, 1, 4, 0.5) !important;
 }
+
+.card-register{
+    height: 430px;
+    margin-left: 100px;
+    width: 500px;
+    background-color: rgba(6, 1, 4, 0.5) !important;
+}
     
     
 .drop {
